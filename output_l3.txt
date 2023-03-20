@@ -1,0 +1,23 @@
+The transition to the cloud happened with the use of full instances, which helped to create the same environment on the cloud that was on premises. The adoption of the cloud increased with the use of virtual machines, which allowed for a 50 times increase in data from 2008 to 2014. The transition to serverless has changed the way resources are used, from being reserved beforehand to paying as demand increases.
+
+The author is discussing the move towards "serverless" computing, which is more granular and efficient in terms of resources. Basically, instead of allocating resources like virtual machines, you pay for the code you actually use. This makes billing more granular and also allows for more flexible scaling.
+
+Serverless is a combination of function as a service and backend as a service function as a service because we are running the services that we want as functions like for example if you have used AWS Lambda functions that we have in AWS if you have used Google Cloud um the they are called Cloud functions there those functions help us run a specific code and for running that you only pay for running that those instances.
+
+The article discusses the difference between serverless computing and traditional cloud computing. Serverless computing is stateless, meaning that the code does not rely on any data stored in the server. Traditional cloud computing is stateful, meaning that the code depends on data stored in the server. Kubernetes is somewhere in between, as it is more granular than traditional cloud computing.
+
+The key difference between traditional cloud computing and serverless computing is that in serverless computing, resources are more granular and there is no need to manage resource allocation. This means that communication patterns between services need to be implemented differently.
+
+The paper discusses the challenges of implementing food and drink in the cloud, and suggests ways to work around these challenges. Specifically, the paper covers five sets of use cases and provides examples for each one.
+
+The biggest challenge with serverless computing is ensuring that storage and functions are properly decoupled, as this is necessary for stateless operations. This can be difficult to do in a way that meets all performance and pricing requirements.
+
+The challenge for cloud providers is to provide low-cost, fast, and granular storage that can communicate with other services. This is a challenge because previously, cloud providers only provided virtual machines with storage attached, and the environments are not prepared for the decoupling of services and the communication that is needed between them.
+
+We need to move to more granular communication patterns in order to improve performance in a serverless environment. This is because there are more components involved in each function invocation, which makes performance prediction more difficult.
+
+The talk covers the challenges that need to be met in order for serverless computing to work in a more efficient way. These challenges include defining more abstraction for services, allocating resources in a more granular way, and taking care of the security of the system.
+
+The professor for this class has office hours on Thursdays, and asks that students book appointments at least 24 hours in advance so that she knows to stay on campus. The submission for everything in this class will be through canvas, and the group submission will be open next Tuesday. The professor for this class also asks that students join their Zoom drop-in session for office hours next week.
+
+If you have an appointment, please be on time so that you can ask your questions. If you have any questions, please ask them next week.

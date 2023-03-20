@@ -1,0 +1,49 @@
+The discussion will focus on the networking aspects of cloud computing, specifically data center infrastructure and how it relates to the provisioning of cloud services.
+
+The author describes the infrastructure of a data center, including the racks of servers, the switches, and the routers. They explain that each server has an IP address and that the traffic from the data center to the internet goes through the border router.
+
+Switches are used to connect different architectures together, and as we move towards more granularity in serverless computing, the communication patterns are changing. The first solution to reducing complexity is to provide cloud functions with more cores, which will allow them to share data and reduce communication. The second solution is to allow developers to explicitly place cloud functions on the same VM instance, which will allow them to use the shared resources of the VM instead of communicating between different VMs.
+
+The article discusses the various solutions that have been proposed to make serverless computing work with virtual machine based cloud computing. However, all of these solutions are interim solutions that are not ideal. The ideal solution would be one that would allow for a lot of redundant paths and be able to respond to the short-lived flows in a network.
+
+The goal of utility computing is to make our infrastructure work for short flows with complex communication patterns. This means that any service can be placed on any server, and that servers will act as hardware components that provide resources for data center operations. To achieve this, we need to make sure that our infrastructure can support granular, serverless functions and that communication between these functions is minimized.
+
+Service agility is the concept that any service can be placed anywhere on a cloud provider's resources. This gives developers more productivity, higher performance and reliability, and lower costs.
+
+The cloud offers the ability to put services on any of the servers in the cloud, but how is this achieved? It has to do with the architecture of the network being used. To make it possible, the cloud provider has to take care of storage management and communication among servers. Other papers discussing data center architectures will be looked at in order to achieve service agility.
+
+Layer 2 networking uses the address resolution protocol (ARP) to map IP addresses to Mac addresses. This can create a lot of broadcast traffic, and the spanning tree protocol is used to prevent broadcast storms.
+
+This design connects servers in a data center using a top-of-rack switch for each rack of servers. The switches are then connected to a tier 2 switch, which is in turn connected to a tier 1 switch. The tier 1 switch is then connected to an access router, which is connected to border routers. This design puts all of the servers in one subnet, allowing them to enjoy all of the benefits of LAN connectivity.
+
+This passage discusses the conventional architecture for data center networks, which uses layer 3 networking. The advantage of this architecture is its scalability. However, the limited host-to-host capacity limits its scalability.
+
+The rack switch with a one gigabit per second link is the bottleneck for communication between the 40 servers. The links between B and A and B and C are 10 gigabits per second, so the bottleneck reduces the throughput from what could be achieved with those links.
+
+We need to come up with a design that will not reduce the capacity of our port from 1 gigabit per second to 250 megabits per second. This can be done by increasing the link capacity.
+
+The bottleneck in the design is the two links between the tier 1 and tier 2 switches. The 40 flows will be distributed among these two links, resulting in a throughput of 1 gigabyte per second.
+
+The Port capacity connecting our tour to the uh each of the servers is one gigabit per second. Then we have these links each one of them is 10 gigabits per second that we can share between those each of those 10 flows each one of them will get one gigabit per second. Then going from there to the we wanted to go from a to c choosing a packs right and we said that we either have to make that link uh 40 gigabits per second in order to be one gigabit per second for each of the flows or we can build path redundancy we can't have multiple paths that we can choose uh like different one of them for a different set of R flows so say my 10 floors that we're going from one to five going from this switch to this switch actually choose this link and this link right so 10 of them share this link share and then this link to uh gets to this switch C so each one of them are sharing a 10 gigabit per second link and therefore they can get one gigabit per second each one of them for communication between two and six like they are sharing one two or two tier two switch link which is think of it per second that part is fine now instead of this path between those two switches they can choose this path right there is a completely different path that they can take there right so we every time slowly choose a completely different path which could be this path this path this pack or this path so we have four different tasks that packets uh can take to get from a to c and therefore we can distribute both traffic between those two uh those four paths and each 10 floats can just share a link right so it is going to be 10 gigabits per second divided by templates each one of them get one gigabyte per second right so with creating redundant paths we gave the option of choosing among those um and we brought up the capacity that we can offer to the uh to the floors to the port capacity which is what what is ideal when we are building data center networks we want to operate a sports capacity of our servers we don't want to have bottleneck links.
+
+The scale of solution usually refers to the power of the components used. The more powerful the components, the higher the price. However, there are always technological limitations on the capacity that can be reached. Therefore, it is preferable to bring in more components to build something, rather than choosing more powerful components. In order to achieve the desired agility in the network, Microsoft's data center was built based on the BL2 architecture. This architecture uses load balancing to distribute traffic evenly across all components in the network.
+
+The article discusses how software defined networking can be used to manage data center networks. Closed topology is used to build data center networks. Policy concept is used to manage and control traffic.
+
+This paper discusses how to build a high-capacity data center network using a combination of circuit switching and packet switching. The goal is to create a network that is both non-blocking and agile, allowing for granular placement of services. The paper outlines the main problems that need to be solved in order to achieve this goal and the approaches that are being taken to solve them.
+
+The goal of the new architecture is to have layer two semantics, flat addressing, and uniform high capacity between servers. This is achieved by separating the IP addresses of physical hosts from the IP addresses of services, and then mapping between them. This gives a separation of name and location. For host-to-host traffic, TCP is used with value and slow balancing to randomize traffic between different paths.
+
+The goal is to build an infrastructure that can support the agility of services, while still maintaining performance and isolation. This will be done by separating name and location addresses, using a directory service to associate the names, and by enforcing the host model with TCP traffic TCP flows.
+
+This passage discusses the use of IP addresses and MAC addresses, and how they are translated between two different types of addresses. The passage also discusses how a directory service is used to locate a service, and how an IP to IP communication can happen between two switches without knowing the IP address of the service.
+
+The question is about whether or not a software defined networking system can decrease performance if more data is sent. The answer is that it is possible, but it is not very likely.
+
+The discussants are discussing the first of three things: Layer Two semantics, the separation of name allocation. They have not discussed the other two yet, but will. This is different from gnats in that it uses IP addresses and not port numbers, and Nats lookup is different. The goal is to achieve flat addressing, which would allow for easier movement of attachments.
+
+The design depicted in the picture has three layers - tour (T1-T6), links, and password. The tour switches are connected to layer two switches, which are in turn connected to layer one switches. The layer one switches are indicated by the "I" symbol, which means they are reachable using any cast. This allows for load balancing between the different instances.
+
+The talk discusses how to use Anycast for load balancing, and how to use Float balancing to choose between different paths to an IP address. It also discusses how to use orchestration to manage services in the cloud.
+
+We will be covering different design concepts that can be used when architecting your own Solutions. Homework for this week will include registering for a Cloud platform and defining your team. Remember to check for deadlines throughout the next week.

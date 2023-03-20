@@ -1,0 +1,25 @@
+The first homework assignment is available, and the deadline is within two weeks. The team submission form for the project will be available tonight, and the project will be due in one week. The Google Cloud platform registration will also be available tonight. Only request Google Cloud credits if you are actually going to use them. The title of the project will be related to the course topics, and it will be available after you form your team.
+
+VL2 is a solution to the problem of providing network connectivity between services in a data center. It is important because it gives us service agility, which means that any service can be installed on any host in the data center.
+
+The purpose of this talk is to discuss the benefits of using a layer 2 network versus a layer 3 network, and to introduce the concept of BL2, a real-world solution for addressing some of the problems associated with layer 3 networks. BL2 is a system that allows for flat addressing, service agility, and the isolation of performance between different flows.
+
+The source sends an IP packet to the destination, which is then routed through a directory service to find the location address of the destination. The directory service then passes the IP address of the destination to the source, which uses it to route the packet.
+
+The sender uses the hash of the TCP five-tuple to choose a path for the packets associated with a particular flow. This ensures that all packets for a given flow take the same path, which improves performance.
+
+In order to randomize the paths of packets associated with a certain number (Hash of the five tuple), the function looks at the TCP flow model. This is done in order to keep the flow characteristics of the packets consistent. If the bandwidth is limited, this will help to avoid bottlenecks. Additionally, because the flows are short-lived, any choke points that are created by the randomization will be freed up quickly.
+
+A large subnet is used to allow for easy communication between services. This gives service agility, as services can be installed anywhere without needing to change IP addresses or inform other services of the change.
+
+The host model is applied by the hash of the five Tuple, which comes from the processing happening at the switch level. This is any cast, which means that you can place the service anywhere without having to change the IP address. This is helpful because it prevents having to change the IP address based on the requirements of the network.
+
+In this example, we learn how to use a close topology with Valiant load balancing to improve performance of service to service communication. This topology allows us to assign all of our services on the same subject, which provides us with the ability to put any service anywhere. The complications are handled at the host, which we know we can upgrade more easily.
+
+The vl2 design provides uniform high capacity, performance isolation, and layer two semantics for service to service communication. However, some parts of the design have changed over time, specifically in terms of how the system is connected to the outside world. One option is to connect all of the hosts in the system to one external module, but this is not a good solution because it is complex and does not scale well.
+
+The article discusses different ways to connect devices in a cloud computing system, and how to deal with failures in the system. The first method is to connect the devices directly to the host, but this has scalability and redundancy issues. The second method is to connect the devices to the aggregation blocks, but this does not follow the modularity of the design. The third method is to connect the devices to the spine, but this does not provide path diversity. The fourth and final method is to connect the devices to the hosts like external sources, which follows the modularity of the design and provides path diversity.
+
+The article discusses how network upgrades can be done in a hitless, step-by-step way that does not affect the rest of the network. It describes how one company has upgraded its network using a direct connect topology with optical circuit switching.
+
+The talk discusses the need to upgrade data centers in a way that allows for continued service while upgrades are being made. The second paper is related to real-world data center upgrades, discussing how a data center was upgraded to improve speed by five times, while also reducing costs and power consumption.

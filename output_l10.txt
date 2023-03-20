@@ -1,0 +1,25 @@
+In this module, we will discuss a set of popular applications and their programming models, as well as the challenges and opportunities of moving towards a serverless model. We will also explore the system architecture and design of microservices-based applications.
+
+The microservices architecture is a back-end architecture for web applications that is built up of small, autonomous, single-responsibility services that are independent from each other. This architecture is used for web applications with many features that are completely independent from each other.
+
+There is a service for driver management, passenger management, and route management. These services work together to provide a complete task, but each one is independent of the others. This means that each service has a single responsibility and can be implemented in a different way.
+
+In microservices architecture, each microservice has its own data store, which leads to polyglot persistence (different modes of data storage and usage in your system). This is in contrast to the traditional web application architecture, where a single data persistence layer is shared by all services.
+
+There can be problems with replicating data between two different services, which can lead to inconsistency. One way to avoid this is to use the eventual consistency model, in which updates are only made to the primary service, and the other services are updated as needed.
+
+Microservices are loosely coupled and designed around one specific function. They should be independent of each other, with no dependencies on data or other services.
+
+This tutorial covers how to break a monolith application into microservices while the service is actually running. It is a very simple tutorial and is a good first step for those considering project 1 and 2.
+
+Websites such as Amazon, Netflix, eBay, and Uber are all designed using microservices architecture. This type of architecture is very good for performance and latency. There is a lot of documentation available on how to move from a monolith application to microservices, as well as how to build many of the famous services used by other services.
+
+Kubernetes is an open source container management and orchestration platform that allows you to deploy and manage your microservices on a set of worker nodes. Kubernetes provides management and orchestration services for your worker nodes, including replicating pods if a node goes down, and managing the lifecycle of your pods.
+
+The main difference between serverless and server full is that in serverless, you are not always running your resources, so you need to configure a serverless resource to keep your code running in a warm pool. With server full, you want to pay for the running of your code, but you also want your instances to be available for doing that.
+
+The talk briefly covers the concept of serverless computing, and how it can be used to automatically scale a system based on events. It then introduces the idea of using a programming model to work with large files that have been broken down into smaller chunks and stored in different places.
+
+The MapReduce programming model is a way to process large amounts of data by breaking it down into smaller pieces and then recombining the results. This model is used in many different situations, such as finding the popularity of a certain phrase or word in a large set of documents. The MapReduce model is composed of two functions, map and reduce, which operate on data that is broken down into smaller, replicated chunks. In order to run MapReduce algorithms, a fault-tolerant infrastructure must be designed, taking into account both the data path and the control path. The Shuffle communication pattern is one that is used in MapReduce and affects both the system and the network.
+
+The last two uh reading compilations will be combined to give you the absolutely necessary reading for the class. If you have read them separately, that is perfect. If you struggle reading from different resources, a compilation will be made available by mid next week. Any last questions?

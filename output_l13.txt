@@ -1,0 +1,25 @@
+The professor discusses the microservices architecture and how it is used in web systems today. He then talks about how this architecture fits into the cloud and how it works with stateful and stateless implementations. Finally, he talks about how the map reduce model can be used to solve many data problems on the cloud.
+
+The talk discusses how a system with cheap nodes can be used to solve a high-level problem efficiently, without choking the network. It then explains how mapreduce works, and how spark can be used for more complex tasks that require repetition. Finally, it explains how resilient distributed data sets are created.
+
+Spark provides a way of caching data that can be reused in parallel operations, which helps to speed up iterations while still providing fault tolerance.
+
+The concept of lineage is that each RDD only needs to keep track of how it is transformed to reach the current point, rather than all of the elements of the RDD. This makes the system more resilient to failures. The model is defined by a limited number of operations that can be applied to reconstruct the RDD in the case of a loss.
+
+Spark can help with machine learning algorithms that are iterative and require the same data set multiple times by caching the data set in an RDD. This can improve performance by avoiding the need to retrieve the data from the distributed file system multiple times.
+
+In Spark, we can use resilient distributed data sets (RDDs) and restricted shared variables to improve performance. By caching data and recalculating values, we can avoid having to read and write data from disk. This model of distributed computing is easy to understand and adapt, making it ideal for use in a variety of situations.
+
+We talked about distributed workers and how to manage them with a cluster manager. We also discussed how to use Spark for more complex tasks such as machine learning. Finally, we briefly touched on two expansions to these models: using a parameter server and a model of tensorflow.
+
+The paper discusses the problem of using the key-value model for machine learning, which can lead to a lot of communication between parts of the system. It suggests using a set of stateless workers and a set of servers that keep the state of the system instead. This would reduce the amount of communication between parts of the system.
+
+The article discusses how to achieve model parallelism using workers and parameter servers. The workers communicate with the server group to get the set of parameters that they are working on. The results of each worker are read on the parameter server, and the workers fetch the results from the parameter server to write it back again.
+
+The matrix is partitioned into server groups, and each group is responsible for a certain set of parameters. This allows for fault tolerance and data replication in case of server failure.
+
+The system described allows for more flexibility in terms of adding and removing elements in a data flow, and also defines loops in order to feed data back into the system. This is beneficial for working with more complex models, specifically recurrent neural networks.
+
+A distributed system is a system that runs the same executor on multiple nodes, with each node working on a different part of the data. This allows for parallel processing and fault tolerance. TensorFlow is a system that uses this distributed processing model to work with arrays of data, called tensors.
+
+This talk focused on the importance of fault tolerance in cloud systems, discussing different types of failures and how to prevent, detect, and recover from them.

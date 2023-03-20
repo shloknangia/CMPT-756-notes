@@ -1,0 +1,9 @@
+The quiz results were much better this time, with many students getting full grades. However, the average grade has not increased much. The next homework assignment is available and has 20 questions, only 7 of which are graded. The assignment is due in 3 weeks.
+
+The talk briefly reviews Spark and its capabilities before delving into a discussion of how the system can be used to achieve fault tolerance for a set of applications. Spark's main abstractions are resilient distributed data sets (RDDs) and parallel operations on RDDs, which allow for easy distribution and processing of data across a set of commodity hardware machines. By using these abstractions, Spark is able to provide an easy-to-use programming model that can be used to reach the goals of fault tolerance.
+
+RDDs are resilient, distributed data sets that are used for iterative and interactive data processing. They can be created from files or by parallelizing arrays. Transformations can be performed on RDDs to produce new RDDs, and RDDs can be persisted to cash or memory. Spark is tolerant of node failures because it can recompute lost data from the remaining nodes.
+
+This text discusses how to build RDDs in Spark, specifically by reading from a distributed file system. It shows how to do this step by step, and how to cache or write RDDs to disk to change their level of persistence.
+
+In Spark, computations are cached as RDDs (Resilient Distributed Datasets) so that they can be reused if needed. This is called lineage. Lineage is what helps Spark achieve fault tolerance while still providing good performance.

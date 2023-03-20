@@ -1,0 +1,51 @@
+Distributed systems are systems that are connected together using a network and are in geographically distant places. They don't have a global clock, and they don't have a shared memory. Message passing is used to communicate between the components of the system.
+
+Distributed systems are systems that collect and collaboratively work towards a common goal. They share characteristics like separation and autonomy, and heterogeneity, which is important because it allows us to manage and run processes on different systems to reach a goal. Some examples of distributed systems include web search, web-based services, online games, and financial trading.
+
+The goal of distributed systems is to allow for computations to be done across multiple nodes, sharing resources and access to remote resources in order to enhance reliability and performance.
+
+Distributed systems are systems where components are spread out across a network and can communicate with each other. Multi-processor systems are similar to distributed systems in that they have separate components, but they share a common clock and have access to shared memory. Array processors are similar to multi-processor systems, but each processor has its own memory.
+
+Distributed systems do not have a shared memory, but they have a common clock. They have to use message passing to communicate between different parts of the system. Workloads that are good for this type of system are ones that can be broken down into components that have minimal usage of the same data or message passing between them.
+
+Reach parallelism is a way of increasing performance by running a task on multiple systems. This is dependent on concurrency, or the ability of different processes to run at the same time. Distributed operating systems are designed to run on loosely coupled processors with tightly coupled software in order to achieve a common goal.
+
+At each node in a network system, we know where to send our packet next in order to reach a solution. This doesn't require a lot of information or dependency at each node, and the operating system can be similar across nodes. However, when running a distributed workload, the goal is tightly coupled and the output from the whole system is what we're trying to achieve.
+
+In a distributed system, processes communicate with each other by passing messages. This is because there is no shared memory that all processes can access. Message passing allows processes to communicate with each other asynchronously, which can improve performance.
+
+We sometimes need to emulate message passing or shared memory on systems that don't have those capabilities. For example, we might want to use message passing on a system that only has shared memory, or vice versa. This can be done by using queues, pipes, or other communication methods.
+
+In a shared memory system, processes can write to and read from a shared resource. In a distributed system, processes communicate with each other by sending and receiving messages. It is possible to emulate these behaviors in each system.
+
+The challenge in building a distributed system is the heterogeneity of the systems. The systems need to be able to run on different hardware and software, and work together.
+
+The talk discusses the challenges of designing distributed systems that are open, scalable, and secure. It emphasizes the importance of modularity and transparency in order to maintain quality of service when multiple systems are working together.
+
+In a distributed system, 48:22 plot platform gives us a way to build our 48:30 distributed systems in the cloud. We are going to discuss some introductory 48:36 concepts on the cloud in the next hour. Taking a five minute break and finishing the class five minutes early instead of taking 10 49:05 minute break is best. Cloud computing is an attempt to bring computing power to use their hands 51:03 in a similar way like electricity or tap water. It was not like that when it started in 51:29 2008 it basically changed from bringing things that you have implemented on premises before 52:03 implementing the same thing in a centralized way in a data center. The one of the things that comes with 52:09 implementation on the cloud is that you have to deliver things that you are implementing on a cloud using networks right and that network is 52:16 similar to the pipes that bring the water to your home. Networks are what 52:21 brings the capacity to connect to the cloud and get the services from uh
+
+The five characteristics of a cloud are that it is on demand and self-service, has broad network access, is resource pooled, has rapid elasticity, and is measured. The three service models are Infrastructure as a Service (IaaS), Platform as a Service (PaaS), and Software as a Service (SaaS). The four deployment models are private, community, public, and hybrid.
+
+There are three main types of cloud computing - public, private, and hybrid. Private cloud is when resources are only available to users within an organization. Hybrid cloud is a mix of public and private cloud, and is often used for applications that need to comply with regulations or for security reasons. Community cloud is a private cloud that is shared by a group of organizations. Utility computing is when demand is unknown and users may grow from one to billions.
+
+The cloud can be used to provide different services, including infrastructure as a service (IAS), platform as a service (PaaS), and software as a service (SaaS). IAS provides access to physical resources, while PaaS provides access to development tools and operating systems. SaaS provides access to full software applications.
+
+Containers as a service is a way of providing access to cloud resources to users without them having to manage the underlying operating system. This can be done through virtualization or containerization, with the latter being more abstract and allowing for more resource sharing.
+
+The cloud involves different levels of software, with application level software being the highest level. This software is used in a cloud environment and allows users to access and manage their data.
+
+The software needed to manage and monitor applications running in the cloud is called "application level software." Cluster level software is used to manage and monitor the resources used by the applications. Platform level software is used to manage and monitor the hardware used by the cloud applications.
+
+The author discusses the challenges and opportunities of moving to the cloud in 2009. They note that one of the key challenges is ensuring availability of services, but that this can be addressed by using multiple cloud providers and replicating data. Another challenge is that of lock-in, where a cloud provider's services and products can dictating how a service is built, making it difficult to move to another provider. The author suggests that this is less of a problem now than it was in 2009, but that it still exists to some extent.
+
+The migration to cloud platforms provides better confidentiality and idability for users, which is a concern for both sides. Encryption is the simplest way to allow access and protect data. Using VPCs can help to protect access to resources, and data transfer bottlenecks can be a problem when migrating services.
+
+In 2009, two papers were published on cloud computing - "Above the Clouds" and "Serverless Computing". These papers outlined the challenges faced by cloud systems at that time, and provided solutions to those problems. In 2013, those same problems are still present, but different solutions are being chosen to tackle them.
+
+The author discusses the different types of workloads that require different amounts of computing power, storage, and data processing. They explain how this affects the way applications are built on the cloud.
+
+AWS offers different instance types that are tailored to different needs. This makes it easier for users to pick an instance type that is best suited for their needs.
+
+The paper predicts that the demand for traffic to move to cloud data centers will increase by 50 fold between 2009 and 2014.
+
+This prediction was given in 2018, and due to the pandemic, the demand for data center traffic has increased. This shows how much Cloud providers actually have to work with, and how much capacity they need to build not only for now, but for the future. This has affected the move towards more granular instances and decoupling of the virtualization of the resources in the cloud.

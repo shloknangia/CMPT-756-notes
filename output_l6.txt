@@ -1,0 +1,43 @@
+In the previous session, we discussed the network element and resources needed for building distributed systems. We said that we need to abstract the resources we have in order to create a network that can store and compute data without bottlenecks. We also discussed the need for service agility, which allows us to place any service anywhere. Today, we will wrap up the discussion on networking and start on the topic of compute resources.
+
+In a distributed system, there is no global clock, and memory is not shared between locations. Parallelism can be gained by using multiple processors to work on different parts of a problem at the same time.
+
+We are discussing distributed systems and how they connect processors to communicate with each other. We are specifically interested in systems that don't share a common clock or memory.
+
+We were discussing coupling as a concept that is important to distributed systems. Coupling can be discussed in terms of hardware (e.g. co-location of resources) or software (e.g. dependence of modules). We categorize coupling as loose or tight, depending on whether the components are working towards the same goal or not. Parallelism is related to coupling in that it refers to the use of more than one processor to achieve a task faster. However, in a distributed system there is usually communication and control involved in breaking down and putting together parallel tasks, which can increase the overall processing time.
+
+The granularity of a task is important in order to achieve parallelism in systems implementation, specifically in distributed systems where concurrency is important. A high granularity means that there is more computation than communication, which is desirable. However, a high granularity can also mean that it is difficult to assign tasks to compute resources.
+
+The size of transistors has decreased over time, and as a result, CPUs have become more complex and faster. However, this has also generated more heat. One solution to this problem is to build smaller units that can achieve the same result.
+
+We are going to talk about the different types of operations that can be performed with distributed systems, specifically for parallel processing tasks. GPUs have gained popularity for these types of tasks because they have thousands of cores, while CPUs are designed for low latency and finish tasks faster. However, GPUs are usually simpler when they are designed and can be programmed in parallel to finish a task quicker. There are alternatives to using GPUs, such as FPGAs or ASICs, which can be programmed to do specific tasks more efficiently. When choosing a compute resource, it depends on the specific task that needs to be performed.
+
+In a distributed system, programs communicate with each other to reach individual goals. The software is tightly coupled, but the processes running in different components at different times have different things stored in their memory and need to communicate differently. The global state of the system includes the state of communication channels as well as the main application. Control algorithms are needed to manage and coordinate the distributed system and handle things like termination and error handling.
+
+In a distributed system, a set of asynchronous processes communicate with each other by message passing. The processes do not share a global memory, so they must communicate through a message system. Messages are asynchronous, meaning that they are not synchronized with each other.
+
+There are two different types of message passing: synchronous and asynchronous. With synchronous message passing, send and receive operations are performed in a handshake fashion. With asynchronous message passing, the send operation returns control to the process before the receive operation is performed. Blocking refers to the process returning control to the invoking process after the processing for a primitive (send or receive) completes. Non-blocking means that the process does not wait for the communication to finish. Algorithms can be centralized or distributed. A centralized algorithm can be broken down to be performed in a distributed way, but a distributed algorithm cannot be broken down to be performed in a centralized way. Symmetric algorithms are those in which all of the distributed processes are performing the same task. Asymmetric algorithms are those in which some of the distributed processes are performing different tasks. Deterministic algorithms always produce the same output given the same input. Non-deterministic algorithms may produce different outputs given the same input.
+
+There are four main terms that are important when talking about distributed algorithms: communication, decision making, time, and resources. Communication between different nodes is important in order to run the algorithm correctly. Decision making needs to happen in different nodes in order to find the shortest path to a destination. Time is important to know how long each step in the algorithm will take to execute. Resources are important to know how much each node needs in order to execute the algorithm correctly.
+
+In a nutshell, when designing algorithms for distributed systems, we need to take into account the kind of information being exchanged, as well as whether or not the algorithm will converge on a solution. Convergence is important for ensuring that the system reaches a decision, but we also need to be aware of conditions that could lead to non-convergent states.
+
+The professor is discussing algorithms for distributed systems and how to make them simpler so they can be more easily scaled. He then answers some questions about homework and the upcoming quiz.
+
+This is a high-level overview of what to expect on the quiz for this week. The quiz will be 10 questions, multiple choice, and should take no more than 20 minutes. The questions will be based on concepts covered in class and the answers will be available the same day.
+
+We want our distributed system processes to be asynchronous, meaning they run on their own time and don't block or wait for other processes to finish. This gives us more parallelism but also complexity. To design an asynchronous algorithm from scratch is usually very complex, so sometimes we use synchronizers which communicate state between processes instead of relying on a common clock.
+
+The simple synchronizer is a way to run a synchronous algorithm on an asynchronous system. In the simple synchronizer, each process exchanges messages with every other process in the system at each step of the algorithm. If there are no messages to exchange, the process will send a dummy message to show that it can progress to the next step. If there are multiple messages to exchange, the process will combine them into one message.
+
+The article discusses the use of message passing and synchronization in algorithms. It describes the Alpha synchronizer, which is a way to remove some of the unnecessary messages and make sure that all the required messages have been exchanged.
+
+In order to be safe, a process needs to confirm that all messages sent in a round have been received, and that acknowledgements have been received for all messages sent. If a message is lost, the process will confirm receipt of the message. Based on these confirmations, the process will announce a safe state, which will be communicated to other processes.
+
+The system is designed to be safe and to move to the next step only when all notes are safe. This is done by passing messages between nodes until the root node is reached. at that point, a broadcast is sent out to all nodes telling them that it is safe to move to the next step.
+
+The question posed is how to optimally place replicas of a data item in a distributed system so that users can access it in a read-only mode. One possible solution is the OPTIC replication algorithm, which is commonly used in modern distributed and Cloud systems.
+
+This passage discusses the different types of instances that are available from cloud providers, and how to choose the right type of instance for different workloads.
+
+This section provides a general overview of the different types of scales and how to choose the right one for your application. It covers the basics of what you need to know in order to make an informed decision when choosing a scale.

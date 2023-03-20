@@ -1,0 +1,47 @@
+We are going to discuss fall tolerance in today's session. We will review some of the concepts that some of you might have seen in undergrad school. We will build up on some of the things that we discussed here in our discussions in the following two weeks. We will talk about faults that happen in distributed systems and how to detect and prevent them. In the upcoming week, we will talk about consensus, which is one of the concepts which is very important in keeping a system working when faults happen.
+
+The Faults of our system need to be detected so that they are not confused with other failures in the system. We should have a procedure in place to be able to do this. If we want to have resilience in our system, we should be able to prevent some of the faults from happening. For example, if a component fails, we should be able to switch to another component. We should also be able to recover from the failure and bring the component back to life.
+
+There are four common types of process failure models: 1. The process stops working and other processes are aware of it. 2. The process stops working but other processes are not aware of it. 3. The process is working but is not able to send or receive messages properly. 4. The process is working but is purposely sabotaging the system.
+
+The objective of fault tolerance is to be able to detect when a failure occurs so that the system can respond accordingly. There are two types of behaviors that are important to consider in this regard: accuracy and completeness. Accuracy refers to the ability of correct processes to correctly identify other correct processes. Completeness, on the other hand, refers to the ability of processes to eventually learn about the correct behavior of all other processes in the system.
+
+This passage discusses different types of failure detectors and how they work. Perfect detectors give perfect detection but are not always accurate. Eventually perfect detectors are not always accurate but will eventually detect a failure. Some or all of the correct processes must tag the incorrect process in order for it to be identified as a failure.
+
+A distributed system is a collection of processes that are working asynchronously and exchanging messages for communication. If one of the processes fails, the communication with that process fails as well, affecting all of the other processes that communicate with it.
+
+A process failure can cause messages to be lost, so our solution is to try to recover to the point where the process was before it failed. This involves checkpointing all of the processes in our system to the same point in time, so that we can continue working from that point.
+
+There are different types of messages that can be lost during a system failure: in transit messages, delayed messages, orphan messages, and duplicate messages. In order to detect these types of messages, we need to look at the state of the system at the time of the failure and identify which messages were in transit, delayed, or orphaned. Duplicate messages can be detected by looking at the state of the system after the failure and comparing it to the state of the system before the failure.
+
+The goal of replication is to have a backup system that can take over in the event of a failure. One way to do this is to have a replicated state machine, which means that you send external events and commands to another system so that it is in the same state as the system that has failed.
+
+The purpose of this section is to discuss different models of replication in our system which is called high availability clusters. One of the ways to have our system always working is by using a model called "one to one" where we have one working copy of the process and system, and one standby system. Another model is "one to n" which means we have one passive failure failover node for n notes. This is usually picked when we have less stringent requirements compared to one-on-one model. In the "one plus one" model, we keep both of the copies active and while this one is working and responding to the requests.
+
+A standby node is a backup node that is in the same state as the primary node. It is used to quickly recover from failure or to switch to in case of a problem with the primary node. The n plus m model means that there is more than one standby node, and that if any of the primary nodes fail, the standby node can take over.
+
+Fault tolerance is the ability of a system to continue operating despite the occurrence of faults. Resilience is the ability of a system to recover from faults. Both concepts are interdependent and essential for ensuring the reliable operation of distributed systems.
+
+The Bulkhead pattern is used in distributed systems to prevent one part of the system from failing and taking the whole system down. This is done by compartmentalizing the system into different parts, so that if one part fails, the other parts can continue to function.
+
+Bulkhead is a resiliency pattern that is used to allocate different sets of resources to different set of requests in order to isolate parts of a system. This can be used to prevent a failure in one part of the system from affecting the rest of the system. Circuit breaker is another resiliency pattern that is used when there is remote communication between components. This pattern allows for some requests to be sent while others are held back, in order to prevent overloading a component that may be struggling.
+
+In order to build a resilient system, it is important to use patterns such as the compensating transaction pattern. This pattern allows you to undo the effects of a failed task by doing something to compensate for the effect that it has done. Another important pattern is the health endpoint monitoring pattern. This pattern allows you to monitor the health of a component by doing things like pinging it or keeping counters about its communication.
+
+This passage discusses the use of endpoint monitoring to ensure that components in a system are working well, and the use of leader election processes to make decisions about the health of the system. It also briefly mentions the possibility of a leader election failure and how the system might cope with it.
+
+Our system is not built to scale properly, and if load increases, one component is likely to fail. To ease load and prevent failure, we can use load leveling and retry patterns.
+
+The article discusses different ways to ensure resiliency for systems, including health monitoring and logging. It also introduces the concept of a scheduler agent supervisor, which is responsible for monitoring the health of processes and assigning tasks accordingly.
+
+The logging process is important in order to ensure the persistence of data. There are two types of logging, optimistic and pessimistic. Optimistic logging assumes that the system can complete the logging before a failure happens, while pessimistic logging assumes that the system does not know what is going to happen. Causal logging is a combination of both optimistic and pessimistic logging. In replicated state machine, logging is important in order to recover from a failure. Checkpointing is a process of saving the state from time to time in order to avoid having to start from the beginning every time a failure occurs.
+
+If we have a distributed system, we need to be careful when taking checkpoints because if we roll back to a checkpoint, it may cause other processes to roll back as well (cascaded rollbacks). To prevent this, we need to keep track of events that happen in the system (pessimistic or optimistic) and then when we go to the checkpoint, we can redo or undo events as needed to get to the desired state.
+
+Systems that use relational databases must be consistent, and this is enforced through logging. However, writing logs to disk can be time consuming and impact performance. One solution is to use checkpoints, which save the state of the system at a certain point in time. This can help reduce the amount of time needed to recover from a crash, but it does not prevent data loss if both the logs and the transactions are lost.
+
+This passage discusses the Airy protocol and how it relates to checkpointing and recovery from failures in a relational database management system. It explains that while checkpointing can help improve performance in the event of a failure, it can also make transactions slower overall.
+
+The solution to the problem of losing data that has been processed but not yet committed in a system crash is called "pessimistic logging." This involves persistently logging data before it is committed to the system, so that if a crash occurs, the data can be recovered from the log.
+
+The professor will be talking about three things in the next session: first, completing the discussion, then expanding it to a distributed implementation, and finally, looking at statistics and practical things about data center failures. The professor reminds students that they will not be graded on correctness in their progress reports, but on finding solutions to questions. Feedback will be given within the week.

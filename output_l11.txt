@@ -1,0 +1,47 @@
+The MapReduce system is a programming model that is used to process large sets of data stored in a distributed file system. The file system is broken into smaller chunks, and the MapReduce system processes these chunks in parallel, taking advantage of the distributed file system.
+
+The map function is used to extract data from each part of a file, while the reduce function combines the data from the map function to produce a meaningful output. In this example, the map function extracts data from a file to find occurrences of a word, and the reduce function sums up the occurrences of that word.
+
+The map and reduce functions are used to output key value pairs. The map function gathers information from chunks of the file and produces intermediate results. The reduce function combines the intermediate results to produce a final result. This is implemented by having each chunk of the file read by a copy of the program, with each copy producing a key value pair. The pairs are then shuffled and sent to the workers running the reduce function. The workers then combine the pairs to produce the final result.
+
+The map function in a MapReduce program takes in a large input file and outputs a series of intermediate key-value pairs. The reduce function then takes those intermediate pairs and produces a final output. Shuffle is the process of emitting the intermediate files from the local storage of the workers to the workers themselves.
+
+MapReduce is a way of processing large data sets by breaking them down into smaller chunks and then combining the results. This is useful for tasks such as creating an inverted index, which can be used to find out which documents contain a certain word.
+
+The Google File System was designed for a cluster of commodity machines, each with limited processing power, memory, and storage. The system is designed to be fault-tolerant, with each machine having a unique ID. The network is not very advanced, but is designed to be able to handle the limited traffic between the machines.
+
+The goal of the design is to eliminate as much communication as possible, especially when working with large files. This is done by doing the computation locally and only sending the smaller pieces of data over the network.
+
+The goal of this system is to explore how a distributed system handles running code from a user program. The scheduler picks one of the nodes to be the master node, and creates workers to run the map and reduce tasks. The workers are assigned resources to run the user program on different parts of the file. The rationale behind breaking the file up is to improve performance by reducing the amount of data that needs to be combined.
+
+The distributed file system design creates better fault tolerance and shorter performance times for reading and writing files. The workers are assigned to map tasks and they read from the file to create an output. When they have finished creating the output, they notify the master.
+
+The map workers are responsible for creating the output for the reduce workers. They do this by taking the input file and breaking it into chunks. They then process each chunk and produce a result. When they are finished, they notify the master that their task is finished and provide the output. The master then spawns the reduce workers, which take the output from the map workers and combine it into a single result. When they are finished, they notify the master and the program is complete.
+
+The question is how to handle workers failing in a large system where tens of thousands of nodes are being used for processing. One solution is to have the master regularly check on the status of each worker, and if any fail, to reassign the work to another set of workers.
+
+If a map worker fails, the master simply assigns the task to another worker. If a reduce worker fails, the master spawns a new node and assigns the task to that node.
+
+The Google File System (GFS) is designed to be tolerant of failures by breaking up data into chunks and replicating those chunks across multiple nodes. If a node fails, the data can be retrieved from another node. The Master node is the central point of failure in the system, and if it fails, the whole system must be restarted from the latest checkpoint.
+
+The file chunks that a map or reduce program works with are themselves files. The font just gives the program information about where the file exists and where the worker is going to be scheduled. If there are any other questions, the speaker suggests taking a five minute break. Extension functions can be added to map or reduce programs to give them more defined functionality. The partition function can be used to add additional functionality to the partitioning of output files. The intermediate machines can be used to execute additional tasks before passing the file to the worker.
+
+The system being discussed is designed to deal with failures that can happen when processing files. If a problem occurs repeatedly on the same record, the system can tag the master to skip that record and continue processing. This can give more accurate results than trying to fix the problem.
+
+The map function in Hadoop splits a large file into smaller pieces, with each piece containing different content. The map function then feeds the smaller pieces into the reduce function, which sums up the number of occurrences of each word. The reduce function then outputs a file containing the combined results.
+
+The MapReduce programming model is a way to process large data sets by breaking them down into smaller subsets, processing each subset, and then combining the results. This model has been used for large-scale indexing, machine learning, and graph computation tasks.
+
+The MapReduce system has a simple interface and is easy to adopt because of its limited functionality. However, its lack of support for iterative processes is a major drawback.
+
+The goal of Spark is to support applications that need to work with one set of data repeatedly. This can be a problem when working with commodity hardware, as there is a risk of losing data or tasks if something goes wrong. Spark provides a way to work with data iteratively, without having to read and write it to the disk each time. This makes it easier to work with large data sets, and keeps the data available for further processing.
+
+Spark is a solution for working with data in a way that is scalable and fault tolerant. It accomplishes this by keeping data in memory and passing it to different workers to process. This makes it possible to recover from failures and process data faster.
+
+Spark is a system for parallel operations on resilient distributed data sets (RDDs). RDDs are read-only collections of objects that are partitioned across a set of machines. Spark's RDDs provide fault tolerance and performance by allowing users to persist and reuse data.
+
+In the next session, we are going to discuss how the concept of RDDs can help us gain fault tolerance. RDDs are created by reading file chunks from a file system, parallelizing arrays, or transforming and caching previous RDDs. This type of fault tolerance is designed for iterative tasks where something might go wrong during processing.
+
+The professor will be providing a reading guide for the midterm, which will be a compilation of the individual readings assigned in the course. There will be no other content on the midterm besides what has been discussed in class and what is in the reading guide. The professor reminds students that they have already submitted their team projects, and that they should not wait for feedback on their project proposals before starting their projects. The professor says that the main feedback on students' progress will come after the first progress report, and that they should be as detailed as possible in that report.
+
+The class is going to have a quiz on Thursday, and Ellie is supposed to be early. The quiz will have a Hands-On component, but not everyone has registered for it yet. AWS is available for everyone to use, and the class will be doing the Hands-On component on AWS. For those who haven't registered yet, there is an alternative resource on Google Cloud that they can use.

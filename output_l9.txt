@@ -1,0 +1,33 @@
+We discussed storage in the previous session, which is one of the three basic abstractions in distributed systems and cloud systems. We talked about different types of storage technologies, resources available for storage needs, and consistency conversations. We stopped after discussing the cap theorem and replication. In this session, we will continue discussing replication and consistency, with examples of real-world systems. We will also talk about your project at the end of the session.
+
+We discussed how updates are sent to replicas in a system, and how this affects latency and consistency. We then considered the implications of sending updates to a different location every time, and how this would affect consistency and latency. Based on these conversations, we are going to discuss a theorem that says we don't always need to have the consideration of having a partition in our system.
+
+We use acid properties for transactional activities because consistency is important. However, there are some use cases where consistency is not as important. For example, in a bigtable system, availability and latency are more important than consistency. In a mongodb system, if there is a partition, availability is more important than consistency. Peanuts is a Yahoo database system that prefers latency over consistency.
+
+There are two main reasons for replicating data in a distributed system: to improve performance and to ensure data consistency. Partitioning is another way of improving performance by breaking down data into smaller chunks and distributing them across different system instances.
+
+The three types of partitioning are: normalized, functional, and event-based. Each has its own benefits and drawbacks, and affects things like load balancing in different ways.
+
+The speaker discusses load balancing and how it affects the performance of read and write requests. He explains that how data is partitioned will affect the performance of the requests.
+
+There are three different ways to partition data - round robin, hashtag, and functional. Each has its own pros and cons in terms of load balancing and performance.
+
+The talk began by discussing the idea of sharding data based on the characteristics of the data and the usage patterns. It was noted that this can provide better performance than other methods. An example was given of an ecommerce system with different types of data that could be managed in different ways. It was explained that when working with one function, you have access to the data of that function. In response to a question, it was clarified that when data is sharded based on range, it is possible that some ranges will be more popular than others and receive more requests.
+
+The author discusses how different types of storage systems can be implemented in the cloud, and how this affects the performance of applications. They use the example of Anna, a solution for auto-scaling transactional data. The problem with building cloud-based applications is that there are both cost and performance barriers. The author suggests that in order to overcome these barriers, developers need to be aware of the trade-offs involved.
+
+The article discusses how to design systems that are able to handle large amounts of data with skew (uneven distribution of requests). One solution is to replicate the hot data (the data that is most accessed) so that there are more instances to work with and load balancing is possible. Another solution is to use lower tier storage for data that is not as popular anymore, so that resources are not wasted on data that is not being accessed as much.
+
+The author discusses how to reduce the cost of a system by scaling data horizontally across tiers of cost and performance, and by shifting data to the top tier when it becomes hot, and to the bottom tier when it becomes unpopular. He gives an example of how this was done in Facebook, where they used an open source system to improve performance for read operations.
+
+Google File System is a distributed file system that was the basis for designing Hadoop. It is designed to work with commodity hardware that is cheap and prone to failure. The system is designed to work with thousands of nodes in a cluster.
+
+The article discusses how to optimize a file system for large file sizes. It describes how a master node manages a set of nodes in a cluster, and how chunks of a file are broken down and stored in different parts of the system. It also discusses how to optimize the system for reads and writes, and how to search for files.
+
+The system described uses a Master node to keep track of metadata for files stored on chunk servers. This includes information on the location of chunks and replicas. When a client wants to read a file, the Master provides the client with the necessary information to fetch the data from the chunk servers. For writes, the Master needs to have updated information on which chunk servers are available and what data is stored on each server.
+
+The Chubby file system keeps information about file chunks in memory in order to respond quickly to user requests. It uses a permissive consistency model, which means that some clients may not be updated at all times. When a client wants to write a file, the master creates a plan for where to store the chunks and returns this information to the client. The client then sends the data directly to the chunk servers. The replicas synchronize with each other to ensure that the write is finalized and then inform the client when it is complete.
+
+Aurora is a high throughput relational database that improves performance by separating the different types of operations done for fault tolerance in the system. This design has a primary location and replica instances, with different types of logs (binary, data, double) that help maintain synchronization between the primary and replica instances.
+
+The mechanism that has been put in place to improve the performance of the system is separating the fault tolerance and redo operations that are done and bringing it into a lower tier of performance. This will be discussed in more detail later on.
