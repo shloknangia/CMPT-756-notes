@@ -1,0 +1,491 @@
+
+Q.
+Suppose we have a hierarchical DCN design as shown in the figure  below. Each rack has 20 hosts and we need high throughput connections on flows from hosts i=1,...,20 in each of racks 1, 2, 3, 4 to hosts j=1,..,20 in each of racks 5, 6, 7, and 8 respectively. Each host is connected to the TOR with a 1Gbps link, and the connections from TORs to Tier-2 and Tier-2 to Tier-1 switches are 10Gbps. Using this architecture:
+
+What is the end-to-end throughput for a host i in rack 2 to the corresponding host j in rack 6 in the architecture below?
+
+Hierarchical.png
+  1Gbps
+  2Gbps
+You Answered
+  500Mbps
+Correct Answer
+  125Mbps
+
+
+
+Q.
+
+
+Three fundamental differences between Serverless and conventional Cloud Computing includes all following options except
+Correct!
+  ->Usage of VMs instead of conventional bare metal
+  User executing code without managing resource allocation
+  User paying for resources used instead of resources allocated
+  Decoupling of computation and storage
+
+Q.
+ Which statement is correct about ECMP?
+  Multiple paths from different sources to different destinations, which have different path costs are found
+Correct!
+  ->Multiple paths from the same source to the same destination, which have the same path cost are found
+  Multiple paths from the same source to multiple destinations, which have the same path cost, are found
+  Multiple paths from different sources to the same destination, which have different path costs are found
+
+
+Q.
+ What is Service Agility? Why is it important?
+  Any Service, Any Server: To allow strong DCN firewall
+  Any Server, Any Rack: To allow warm-pooling of resources
+  Any Server, Any Rack: To allow virtualization
+Correct!
+  -> Any Service, Any Server: To allow for easy resource allocation and service migration in DCN
+
+
+Q.
+
+
+Why do we try to avoid Fat Tree architecture in designing a Data Center Network?
+  To allow easy multicast
+  To allow L2 broadcast
+  To allow L3 subnetting
+Correct!
+  To harness link capacity requirements
+
+
+Q.
+
+
+Which statement is correct about synchrony?
+Note: Please choose all possible answers. 
+ 
+
+Synchronous communication yields a higher degree of parallelism, which yields a more complex state of the system at any given time.
+
+Correct!
+->Asynchronous systems have a more complicated global state space.
+
+Synchronous systems are always non-blocking.
+Data parallelism requires synchronous processing.
+
+
+Q.
+
+
+Which statement is correct about Synchronizers?
+ 
+
+𝝰 synchronizer needs communication among each node and all other nodes in the network to proceed to the next round.
+ 
+
+𝛄 synchronizers need broadcasts from each node to its parents, and convergecasts from roots to its neighbours. That makes it work like a simple synchronizer, in that it also needs one message per round.
+
+
+Correct!
+-> Simple synchronizer needs one and only one message communciation among all neighboring processes in each round.
+ 
+
+β synchronizer should be used on BFS and all algorithms that involve any type of trees
+
+
+
+
+Q.
+
+Which statement(s) is(are) correct about a distributed program?
+Please select all applicable options.
+
+Correct! 
+-> Processes in a distributed program may use a control algorithm running in parallel with the main algorithm.
+ 
+Processes in a distributed program always work in synchronous mode.
+
+Correct! 
+-> Processes in a distributed program do not share a global memory.
+ 
+Processes in a distributed system should never experience failures. 
+
+Processes in a distributed algorithm are always blocking.
+
+
+Q.
+Which statement(s) is(are) correct about a distributed system?
+Please select all options that apply.
+
+Correct!
+-> The global state of a distributed system at any time includes states of processes and states of communication channels at that time.
+
+A distributed system needs blocking communication among its processes.
+
+A distributed system needs synchronous communication among its processes.
+
+A distributed system needs parallel communication and computation among its processes.
+
+A distributed system needs use of read() and write() primitives among its processes. Therefore, if we are using communication channels, we need to use blocking synchronous communication to model read() and write() using send() and receive().
+
+
+Q.
+
+Which option provides the correct answer and explanation about message complexity in Synchronizers?
+
+Please select all correct options.
+ 
+
+𝛄 synchronizers do not need an explicit initialization.
+
+Correct!
+-> 𝝰  synchronizers do not need an explicit initialization.
+
+Correct!
+-> Set up of the spanning tree causes the initialization message and time complexity of β and 𝛄 synchronizers 
+
+Simple synchronizer needs to exchange messages with all nodes in the network. Therefore, its time and messaage complexity for a round is O(L).
+
+β synchronizers do not need an explicit initialization
+
+
+
+Q.
+
+Which statement is correct about a data center?
+
+
+Correct!
+-> A large portion of traffic in a data center belongs to communication among the services (hosts) inside the data center.
+ 
+
+Network functions are only installed at the edge of the data center, where a single pane of glass controls the traffic flow between the TOR and hosts.
+ 
+
+Out-of-band L2 control is used in data centers. This is because rapid changes in deployment necessitates routing information exchange separation.
+
+Note: Out-of-band control means control flow is separate from data flow.
+ 
+Scale up of switches are needed at TOR level due to aggregation of traffic above. This is achieved by replication of each TOR for connected hosts.
+
+
+Q.
+
+Why do we consider DCN bisection bandwidth in designing cloud solutions?
+ 
+
+To map the compute usage of the application to the hierarchical architecture
+
+Correct Answer
+-> To consider scarcity of network resources in designing network infrastructure
+
+To reduce storage for the each compute service
+ 
+To map the application needs to the fat CPU architecture
+
+
+Q.
+
+During design process of a Distributed Data Store, we decide to send write operations to a master node and then from there to replica nodes. If the replication (writing the data received at master/primary to all replicas) is synchronous, which option is correct about Consistency, Partition-Tolerance, or Latency of the resulting system?
+
+Note: Please select all possible answers.
+
+
+
+If we have a system which is partitioned across a WAN, we can strictly achieve both of the consistency and latency. 
+
+If we have a partitioned implementation, we have a faster system, but we sacrifice consistency for latency. 
+
+This system is not partition-tolerant as it cannot retain latency and consistency.
+
+Correct!
+->If we have a partitioned implementation, consistency is preserved, but latency is limited by the slowest replica.
+
+
+
+Q.
+What is PACELC requirements of a fully ACID Relational Database?
+  PE/AL
+Correct!
+->  PC/EC
+  PC/EA
+  PE/AC
+  PA/EL
+
+
+
+Q.
+What does Monotonic Reads mean?
+
+Please select all correct options.
+
+ 
+It means successive reads will reflect increasing values on the resources affected by write operations.
+
+Correct! 
+-> It means successive reads will reflect values affected by a non-decreasing set of write operations.
+ 
+
+It means successive reads will first reflect the unchanged values on the resources that are scheduled to be affected by write operations preceding them, then apply the write.
+ 
+It means read operations reflect the write operations that logically precede them.
+
+It means write operations will not change the value for the read operations that logically precede them
+
+
+Q.
+Which of the following options is what happens in a simple synchronizer?
+
+Please select all options that apply.
+ 
+If a node does not have a message exchange with its neighbors in a round, it will keep its safe message to the next round .
+
+Correct! 
+-> All message exchanges between a node and its neighbors are combined to form a one message per round.
+ 
+A safecast is sent from ther room to all of its parent nodes.
+
+A broadcast safe message from root node to leaf nodes is sent, even if the root node does not have any message to send.
+
+
+Q.
+
+Assume we implement sharding using range partitioning. Select the option(s) that correctly identify the query performance and load-balancing observed in the resulting shards.
+
+Note: Sharing is Horizontal Data Partitioning (Same Schema)
+
+ 
+
+Load-balancing may not be good due to data skew (popular data in certain ranges of data).
+Query performance may only be good for point queries, and bad for range queries.
+
+
+Correct Answer
+->Load-balancing may not be good due to data skew (popular data in certain ranges of data).
+A good Query performance could be achieved for range and point queries due to co-location possibility of ranges of data in each shard.
+
+
+Load-balancing may not be good, due to the fact the random queries are not in the same range.
+Query performance will be bad for range and point queries due to required scan of all shards.
+
+Load-balancing may be good due to random data placement.
+Query performance will only be good for point queries, and bad for range queries.
+
+
+
+Q.
+
+
+Which option is correct about data partitioning?
+
+ 
+
+Row splitting may help improve security  but it will hurt performance, and scalability.
+Security is achieved due to possibility of limiting access to separate columns.
+Performance cannot be improved due to the need to jump between partitions to get a full record.
+Scalability cannot be improved since the trade-off between consistency and latency is harder to keep for multiple columns of data.
+
+ 
+Sharding may help improve security but it will always hurt performance, and scalability.
+Security is achieved due to possibility of limiting access to data to each function.
+Performance can never be improved due to the need to keep consistency all the time.
+Scalability can never be improved since the trade-off between consistency and latency is harder to keep for multiple shards of data.
+
+
+Correct Answer
+->Functional data partitioning may help improve security , performance, and scalability.
+Security could be improved due to possibility of limiting access to data to each function.
+Performance could be improved due to fact that operations on each partition take place over a smaller volume of data.
+Scalability could be improved as data partitioning can help residing data beyond physical hardware limits of a single unit.
+ 
+
+Sharding may hurt security  but it will improve performance, and scalability.
+Security can never be improved due to creating multiple exposure points.
+Performance could be improved due to fact that operations on each partition take place over a smaller volume of data.
+Scalability can be improved as consistency is no longer needed.
+
+
+Q.
+
+
+We discussed that GFS had a single master node. Which elements in the design of GFS helped prevent overloading the master?
+
+Please select all applicable answers.
+
+
+Having multiple replicas of the master: While master is a single logical entity, it could be implemented as thousands of synchronized nodes that can perform read and write in parallel.
+
+Storing three copies of each chunk: While all of the data needs to be read and written by the master, read and write can happen from all of the replicas.
+
+Allocating all chunks of the same file and its replicas on one local worker machine: While we do have multiple chunks and multiple replicas of each of those chunks, the fact that they are all kept in one machine, the operations will be kept local, and therefore, master will only need to read one large file each time.
+
+Correct Answer
+->Separating Data and Control flow: While control flow is controlled by master, read and write of data happens directly between the GFS client and the chunkservers.
+
+
+Q.
+
+
+Distributed implementation of which of the following data systems is not possible?
+  Relational Databases
+  File Systems
+  Key-value stores
+  Large Object Storages
+Correct!
+  ->Distributed implementation of all given options are possible
+
+
+Q.
+How does lineage improve Spark?
+ 
+
+Through logging the footage of failed processors at the moment of creating and loss of RDDs.
+
+Through replication of RDDs for materialized interim results to ensure RDD of every step is persistently stored on all distributed nodes.
+
+Correct!
+-> Through possibility of reconstructing a lost RDD, without the need for always persisting RDDs, or a full system rollback to a checkpoint.
+
+Through parallelizing the fault-tolerance by persisting multiple versions of the same RDD object every time an updated version is computed.
+
+
+Q.
+Which statement is correct?
+Note: Please select all applicable options.
+ 
+Monitoring worker nodes in MapReduce is performed through a push notification from failed worker nodes to inform the master about the failure of the worker.
+
+Correct!
+-> By design, Map, Shuffle, and Reduce are performed one after the other in MapReduce. This means that one is phase is started when the previous phase is finished. However, they can be performed in parallel when possible.
+
+Correct!
+-> Monitoring worker nodes in MapReduce is performed using periodic pings from the master node.
+ 
+A failed map worker informs all reduce tasks to go idle on return.
+
+
+
+Q.
+Which statement is correct about model abstraction in MapReduce?
+
+Note: Please check all applicable options.
+ 
+It is the best model for classes of applications that need model parallelism on replicated data.
+
+Correct! 
+-> It could be used for a classes of applications that are compatible with the introduced simple data parallelism model.
+ 
+It is the best fit for a classes of applications that work on iterative data flows introduced in MapReduce.
+
+It could be used for a classes of applications that are compatible with exchange of single-value variables between two phases.
+
+
+
+Q.
+
+
+Which option is not a possible way for constructing an RDD?
+
+Correct!
+->Executing an existing RDD
+ 
+Parallelizing an existing RDD
+ 
+Creating an RDD from HDFS files
+ 
+Transforming an existing RDD
+
+Persisting an existing RDD
+ 
+
+
+Q.
+Which options are correct?
+Please select all applicable options.
+
+Spark can only be used in synchronous mode with strict consistency
+
+
+Correct!
+->MapReduce, Spark, Parameter Servers for ML, and TensorFlow all support Data Parallelism.
+ 
+TensorFlow can only be used in asynchronous mode with eventual consistency
+
+MapReduce supports model parallelism, but cannot be used for data parallelism.
+
+Spark does support model parallelism but does not support data parallelism.
+
+
+
+Q.
+In which of the cases below there is no need to set the state of the worker to idle (and start a new worker with the same task)?
+
+Please select all applicable options.
+ 
+Failure of a map worker that just completed a task
+ 
+Failure of a reduce worker that has a task in progress
+ 
+Failure of a map worker that has a task in progress
+
+Correct!
+->Failure of a reduce worker that just completed a task
+
+
+Q.
+
+
+What are tensors?
+Correct!
+  ->n-dimentional arrays
+  2D matrices with virtual gradient values
+  key-value pairs
+  relational database tables
+
+
+Q.
+
+Which practice mentioned in the options below is beneficial for microservices architecture?
+
+Correct!
+->Keeping data private to the specific microservice that owns it
+ 
+Deployment of data of a group of microservices in a containerized format for usage by a group of interdependent microservices
+ 
+Sharing data among groups of microservices
+
+Implementing services as a part of the critical path of application execution
+
+
+Q.
+Which statement is correct?
+
+Please select all applicable options.
+ 
+
+Horizontal Splitting (Sharding) using Round Robin will adversely affect load-balancing but may improve performance of range queries
+
+Horizontal Splitting (Sharding) using Hashing may adversely affect load-balancing but will improve performance of range queries
+
+Horizontal Splitting (Sharding) based on Key Ranges may improve load-balancing but will adversely affect performance of range queries
+
+Correct!
+->Horizontal Splitting (Sharding) using Hashing may improve load-balancing but will adversely affect performance of range queries
+
+Correct Answer
+->Horizontal Splitting (Sharding) using Round Robin may improve load-balancing but will adversely affect performance of range queries
+
+
+
+Q.
+Which statement(s) are correct about Microservices architecture?
+
+Please select all applicable options (one or more).
+
+Correct!
+-> Each microservice is independent of other microservices, and microservices do not need to share a technology stack 
+
+Microservices cannot use pub-sub (publisher-subscriber) communication. This is because of end-to-end dependency of publishers (event generators) and subscribers (event consumers)
+
+Correct!
+-> Microservices only need to communicate through APIs and can hide their implementation details from other Microservices
+
+Microservices should not localize their data and are recommended to use a system-wide data persistence layer
+
+Microservices should not communicate through API gateway
+
