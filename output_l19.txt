@@ -1,0 +1,23 @@
+This is the last session of lecture and there will be a quiz on Tuesday. The next two sessions will be presentations and the schedule for the presentation will be released before the weekend. The progress report has been released and everybody has received a full grade. The projects are in different ranges of completeness and some people have not finalized their design yet. The presentation will start next Thursday and the outcomes are due at the evening of the last day of the presentations. One of your friends presented their work in cstc Awards yesterday and it was an amazing work.
+
+This talk is about submitting work to competitions to get exposure for it. The speaker encourages submitting work to competitions, especially work that is being done in the classroom. They discuss how blockchain systems work and how different consensus algorithms are used in different blockchains. They mention that proof of work is the initial proposal for blockchain, but that there are now concerns about it in terms of security and energy efficiency.
+
+The article discusses the difference between proof of work and proof of stake algorithms. Proof of work is an energy-intensive process where miners search for a solution to a hashing puzzle. Proof of stake is a more social algorithm where people who put up a stake of funds can propose blocks to be added to the blockchain.
+
+Validators in the Ethereum network put up money as a stake in order to propose blocks. If they show bad behavior, they lose part of their stake. Other stakeholders in the network then approve or reject the proposed block. If it is approved, it is added to the blockchain and the validator receives a reward.
+
+The system is designed to prevent bad blocks from being added to the network, meaning that consensus must be reached in order for a block to be added. This can be done through mechanisms that penalize bad behavior.
+
+In Ethereum, proof of stake is used instead of proof of work. This means that users can earn rewards for validating blocks, but they can also be penalized for bad behavior. The trustworthiness of the system is built up over time through social interactions and penalties. Right now, there are some questions about how effective proof of stake is, but the system is designed to prevent bad behavior.
+
+The speaker discusses the incentive to build blocks in a blockchain. If there is only a reward for building a block, why wouldn't people just create empty blocks? The speaker suggests that transaction fees would prevent this. They continue by discussing what happens when someone mines a block but someone else has already mined and broadcasted a different block.
+
+The Solidity programming language allows for the creation of smart contracts, which can be used to track transactions and other data on a blockchain. This is useful for applications where it is important to have a record of everything that has happened in the system, as the data is immutable.
+
+Cryptozombies.io is a game that teaches you how to write apps for Ethereum. It is important to write efficient code because it will be run on all nodes on the network. Solidity is the programming language used for Ethereum. Non-fungible tokens (NFTs) are similar to blocks in a blockchain network, but they contain metadata describing something unique instead of transactions.
+
+Non-fungible tokens are used to create unique digital assets that can be tracked and copyrighted. This is especially important in the context of web 3.0, where everything is digital and peer-to-peer.
+
+A zero knowledge proof (ZKP) is a way to prove something without revealing the actual information. It works by providing a challenge to the other person, who then responds to the challenge. If the response is correct, then the other person knows the password without actually hearing it.
+
+The speaker discusses the statistics of the like and how some of the methods involve solving a puzzle to get to the solution. They will bring more information on this topic in the next session.
