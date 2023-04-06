@@ -1,0 +1,93 @@
+1: (~10-20 Seconds)​
+
+​
+
+Hello everyone, We are Group 11, ​
+
+And our project topic is comparing serverless and serverfull implementation using microsrvice architecture,​
+
+And my team includes, myself, gaurav, song, jialang and timmy​
+
+
+
+2: (~30-40 Seconds)​
+
+​
+
+We stared with creating a simple microservices application to replicate a e-commerce platform.​
+
+We created a fancy store applcation with 2 microservices to maintain Orders and products in our App.​
+
+Our frontend application is in React which talks to Node js REST APIs and the data is stored in NOSQL DB​
+
+As you can see the design both of our microservices supports basic crud operations and have a separate DB ​
+
+​
+
+3: (~60-90 Seconds)​
+
+​
+
+So in our serverless approach we used google cloud functions to deploy our microservices ans Firestore DB which is a NOSQL DB.​
+
+As cloud functions scale with respect to number of invocations, so we will be charged with respect to requests​ or whenever the function runs
+
+​
+
+And in serverfull approach we created 3 VMs , 1 for each service. So each Vm has code for running microservices and has Mongo Db installed so that Node js app can talk to DB.​
+
+And in VM based approach we just need to keep out VMs active/alive the whole time we want out application up and running​
+
+
+
+
+4 : (~60-90 Seconds)​
+
+​
+
+Here, on this slide we can compare both the deployment starategies, with respect to response time, throughput and Cost​
+
+​
+
+So we deployed 2 Serverfull models, one with bad/not so good configuration VMs and other one with better configuration virtual machines.​
+
+In the first table you can see the numbers highlighted​
+
+​
+
+For a GET request returning all the orders​
+
+At the top, high config VM takes 71ms, serverless take about 78ms whereas not so good config VM take 92 ms ​
+
+​
+
+​
+
+Comparing our strategies for all the API endpoints tested, the graph will give you a better picture​
+
+So high config VM performs slightly better than serverless model, but just slightly, whereas serverless performs much better then low config VM.​
+
+You can even see that serverless take a little time in the starting when the machines boot but as the no.of requests increase the avg response time reduces.​
+
+​
+
+Comparing the cost of these implementations​
+
+​
+
+running these VMs for a month ,  High comfig VM takes about 60 USD, low config takes 25 USD
+
+Whereas for serverless approach we are charged per traffic, so for running about a milllion requests it cost around 3USD only.​
+
+​
+
+​
+
+
+And All the numbers you see here are calculated using load and performance testing platforms such as artillery and grafana​ which can be used for high load testing , as you can see we tested using more than 4 hund thousand requests and data generated can be fed to pandas to visualize data
+
+
+
+Thank You Everyone
+Thats it from our side
+
